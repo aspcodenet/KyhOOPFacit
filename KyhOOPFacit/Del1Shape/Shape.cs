@@ -1,6 +1,15 @@
 ﻿namespace KyhOOPFacit.Del1Shape;
 
 
+/*
+ *Skapa ny en klass Rectangle också
+Implementera  Draw(), GetArea()
+Skapa upp en Lista med Shapes (några rectancles, några circles)
+Loopa igenom alla och anropa Draw()
+ *
+ */
+
+
 public class Point
 {
     private readonly int _x;
@@ -64,6 +73,27 @@ public class Circle : Shape
         return _radius * 2;
     }
 
+}
+
+public class Rectangle : Shape
+{
+    private readonly int _width;
+    private readonly int _height;
+
+    public Rectangle(int width, int height, Point point ): base(point)
+    {
+        _width = width;
+        _height = height;
+    }
+
+    public double GetArea()
+    {
+        return  _height * _width;
+    }
+    public override void Draw()
+    {
+        Console.WriteLine($"Ritar ut en rektangel på {Position.X},{Position.Y} som är {_width} * {_height} stor");
+    }
 }
 
 
