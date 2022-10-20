@@ -1,5 +1,5 @@
 ﻿using KyhOOPFacit;
-using KyhOOPFacit.Del1Shape;
+using KyhOOPFacit.Banken;
 
-var app = new AppDel1();
+var app = new BankApp();
 app.Run();
